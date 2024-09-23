@@ -13,4 +13,4 @@ interface TimeConstraint {
     next(date: Date): Date;
 }
 
-export { TimeConstraint, Timing };
+export type { Timing as T, TimeConstraint as a };

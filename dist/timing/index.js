@@ -44,7 +44,6 @@ var path = __toESM(require("path"));
 var FileTiming = class {
   constructor(filepath) {
     this.filepath = filepath;
-    this.locker = {};
     const dir = path.dirname(this.filepath);
     if (!import_fs.default.existsSync(dir)) {
       import_fs.default.mkdirSync(dir, { recursive: true });
@@ -55,6 +54,7 @@ var FileTiming = class {
     }
     this.read();
   }
+  locker = {};
   read() {
     this.locker = JSON.parse(import_fs.default.readFileSync(this.filepath, "utf-8"));
   }
@@ -92,6 +92,7 @@ var withRedisTiming = async (input, f) => {
   }
 };
 var RedisTiming = class {
+  client;
   constructor({ host, port, keyPrefix }) {
     this.client = new import_ioredis.Redis({
       host,

@@ -1,4 +1,4 @@
-import { T as Timing, a as TimeConstraint } from '../contract-DdJfrOyN.js';
+import { T as Timing, a as TimeConstraint } from '../contract-DdJfrOyN.mjs';
 
 type Mode = (ShotMode | LoopMode) & {
     _type: string;

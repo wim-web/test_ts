@@ -4,7 +4,6 @@ import * as path from "path";
 var FileTiming = class {
   constructor(filepath) {
     this.filepath = filepath;
-    this.locker = {};
     const dir = path.dirname(this.filepath);
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
@@ -15,6 +14,7 @@ var FileTiming = class {
     }
     this.read();
   }
+  locker = {};
   read() {
     this.locker = JSON.parse(fs.readFileSync(this.filepath, "utf-8"));
   }
@@ -52,6 +52,7 @@ var withRedisTiming = async (input, f) => {
   }
 };
 var RedisTiming = class {
+  client;
   constructor({ host, port, keyPrefix }) {
     this.client = new Redis({
       host,

@@ -1,3 +1,4 @@
+"use strict";
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
@@ -16,16 +17,31 @@ var __copyProps = (to, from, except, desc) => {
 };
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// src/ok/index.ts
-var ok_exports = {};
-__export(ok_exports, {
-  ok: () => ok
+// src/util/function.ts
+var function_exports = {};
+__export(function_exports, {
+  calculateMilliseconds: () => calculateMilliseconds
 });
-module.exports = __toCommonJS(ok_exports);
-var ok = () => {
-};
+module.exports = __toCommonJS(function_exports);
+function calculateMilliseconds({
+  h,
+  m,
+  s,
+  ms
+}) {
+  const toM = (h2) => h2 * 60;
+  const toS = (m2) => m2 * 60;
+  const toMS = (s2) => s2 * 1e3;
+  return toMS(
+    toS(
+      toM(
+        h || 0
+      ) + (m || 0)
+    ) + (s || 0)
+  ) + (ms || 0);
+}
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  ok
+  calculateMilliseconds
 });
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=function.js.map

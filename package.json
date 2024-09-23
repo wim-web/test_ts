@@ -9,16 +9,25 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
     },
-    "./ok": {
-      "import": "./dist/ok/index.mjs",
-      "require": "./dist/ok/index.js"
+    "./scheduler": {
+      "import": "./dist/scheduler/index.mjs",
+      "require": "./dist/scheduler/index.js"
+    },
+    "./timing": {
+      "import": "./dist/timing/index.mjs",
+      "require": "./dist/timing/index.js"
     }
   },
   "scripts": {
     "build": "tsup"
   },
+  "dependencies": {
+    "ioredis": "^5.4.1",
+    "winston": "^3.14.2"
+  },
   "devDependencies": {
-    "typescript": "^4.9.0",
-    "tsup": "^6.0.0"
+    "@types/node": "^22.5.5",
+    "tsup": "^6.0.0",
+    "typescript": "^4.9.0"
   }
 }

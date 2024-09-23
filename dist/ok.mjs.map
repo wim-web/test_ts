@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/ok.ts"],"sourcesContent":["export const ok = () => { }\n"],"mappings":";AAAO,IAAM,KAAK,MAAM;AAAE;","names":[]}

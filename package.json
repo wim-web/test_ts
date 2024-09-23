@@ -1,0 +1,24 @@
+{
+  "name": "pien",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./ok": {
+      "import": "./dist/ok.mjs",
+      "require": "./dist/ok.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "tsup": "^6.0.0"
+  }
+}

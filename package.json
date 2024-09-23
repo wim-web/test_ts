@@ -10,8 +10,8 @@
       "require": "./dist/index.js"
     },
     "./ok": {
-      "import": "./dist/ok.mjs",
-      "require": "./dist/ok.js"
+      "import": "./dist/ok/index.mjs",
+      "require": "./dist/ok/index.js"
     }
   },
   "scripts": {

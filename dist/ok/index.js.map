@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/ok/index.ts"],"sourcesContent":["export const ok = () => { }\n"],"mappings":";;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAO,IAAM,KAAK,MAAM;AAAE;","names":[]}

@@ -16,7 +16,7 @@ var __copyProps = (to, from, except, desc) => {
 };
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
-// src/ok.ts
+// src/ok/index.ts
 var ok_exports = {};
 __export(ok_exports, {
   ok: () => ok
@@ -28,4 +28,4 @@ var ok = () => {
 0 && (module.exports = {
   ok
 });
-//# sourceMappingURL=ok.js.map
+//# sourceMappingURL=index.js.map

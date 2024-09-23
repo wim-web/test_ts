@@ -7,15 +7,18 @@
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
     },
     "./scheduler": {
       "import": "./dist/scheduler/index.mjs",
-      "require": "./dist/scheduler/index.js"
+      "require": "./dist/scheduler/index.js",
+      "types": "./dist/scheduler/index.d.ts"
     },
     "./timing": {
       "import": "./dist/timing/index.mjs",
-      "require": "./dist/timing/index.js"
+      "require": "./dist/timing/index.js",
+      "types": "./dist/timing/index.d.ts"
     }
   },
   "scripts": {
